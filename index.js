@@ -11,7 +11,7 @@ app.use(express.json());
 
 // name: vegists pass: W8HBJaphLOkihnbW
 // token: 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
-const uri = `mongodb+srv://vegists:W8HBJaphLOkihnbW@cluster0.b2kqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.b2kqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
